@@ -84,4 +84,28 @@ public class OperatorPractice {
 		char gender = str.charAt(7);
 		System.out.println(gender == '1' || gender == '3' ? "남자" : "여자");
 	}
+	
+	public void practice6() {
+		System.out.print("정수1 :");
+		int num1 = sc.nextInt();
+		System.out.print("정수2 :");
+		int num2 = sc.nextInt();
+		
+		System.out.print("입력 :");
+		int num3 = sc.nextInt();
+		
+		boolean result = (num2 < num3) || (num3 <= num1) ? true : false;
+		System.out.print(result);
+		
+	}
+	
+	public void practice7() {
+		System.out.print("입력1 :");
+		int num1 = sc.nextInt();
+		System.out.print("입력2 :");
+		int num2 = sc.nextInt();
+		System.out.print("입력3 :");
+		int num3 = sc.nextInt();
+		
+	}
 }
