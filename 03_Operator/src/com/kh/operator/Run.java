@@ -9,7 +9,7 @@ public class Run {
 		//di.method3();
 		
 		OperatorPractice vi = new OperatorPractice();
-	vi.practice5();
+	vi.practice7();
 		}
 }
 
