@@ -148,4 +148,45 @@ public class ControlPractice {
 		
 		System.out.println("로그인 성공");
 	}
+	
+	
+	
+	public void practice6() {
+		System.out.println("권한을 확인하고 하는 회원 등급 :");
+		String user = sc.next();
+		
+		if(user.equals("관리자")) {
+			System.out.println("회원관리, 게시글 관리. 게시글 작성, 게시글 조회, 댓글 작성");
+		} else if (user.equals("회원")) {
+			System.out.println("게시글 작성, 게시글 조회, 댓글 작성");
+		} else if (user.equals("비회원")){
+			System.out.println("게시글 조회");
+		} else {
+			System.out.println("다시");
+		}
+	}
+	
+	
+	public void practice7() {
+		System.out.print("키 :");
+		double A = sc.nextDouble();
+		
+		System.out.print("몸무게 :");
+		double B = sc.nextDouble();
+		
+		double bmi = B/A*A;
+		
+		if(bmi<18.5) {
+			System.out.println("저체중");
+		} else if (bmi<23) {
+			System.out.println("정상체중");
+		} 
+	
+	
+	
+	
+	
+	
+	
+	
 	}
