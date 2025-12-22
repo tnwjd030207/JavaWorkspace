@@ -13,6 +13,6 @@ public class Run {
 		//bs.method2();
 		
 		ControlPractice co = new ControlPractice();
-		co.practice2();
+		co.practice2(); //
 	}
 }
