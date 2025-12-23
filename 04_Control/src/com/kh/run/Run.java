@@ -3,6 +3,8 @@ package com.kh.run;
 import com.kh.chap01.condition.A_If;
 import com.kh.chap01.condition.B_Switch;
 import com.kh.chap01.condition.ControlPractice;
+import com.kh.chap02.loop.A_For;
+import com.kh.chap02.loop.B_While;
 
 public class Run {
 	public static void main (String[] args) {
@@ -13,6 +15,12 @@ public class Run {
 		//bs.method2();
 		
 		ControlPractice co = new ControlPractice();
-		co.practice6(); 
-	}
+		//co.practice7(); 
+		
+		A_For af = new A_For();
+		//af.method9();
+		
+		B_While bw = new B_While();
+		bw.method2();
+		}
 }

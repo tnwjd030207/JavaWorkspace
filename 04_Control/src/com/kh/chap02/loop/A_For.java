@@ -39,11 +39,11 @@ public class A_For {
 	public void method1() {
 		//5회 반복하는 반복문
 		
-		for(int i = 0; i<5; i++) {
+		for(int i=0; i<5; i++) {
 		System.out.println("안녕!");
 		}
 		
-		for(int i =11; i<16;i++) {
+		for(int i=11; i<16; i++) {
 			System.out.println("안녕2");
 		}
 		for(int i=0; i<10; i+=2) {
@@ -103,7 +103,7 @@ public class A_For {
 		 * java.lang.Math클래스의 random()를 호출하면
 		 * 매번 다른 "실수형"의 랜덤값을 얻어올 수 있다.
 		 * 
-		 * lanv -> import X
+		 * lang -> import X
 		 * 
 		 * 랜덤값의 범위
 		 * 0.0 <= 랜덤값 <1.0
@@ -121,7 +121,7 @@ public class A_For {
 		 * 코드 => 랜덤값 * 10 + 1
 		 * 10 -> 출력하고자 하는 갯수
 		 * 1 -> 시작 숫자
-		 * Math.random() *출력할 갯수 + 시작 수
+		 * Math.random() * 출력할 갯수 + 시작 수
 		 * 
 		 */
 		
@@ -162,8 +162,63 @@ public class A_For {
 		for(int i=1; i<=9; i++) {
 			System.out.println("2 X "+i+" = "+(2*i));
 		}
+		
+		//구구단 2단부터 ~ 9단까지 모두 출력
+		for(int dan=2; dan<=9; dan++) {
+			for(int i=1; i<=9; i++) {
+				System.out.println(dan+" X "+i+" = "+(dan*i));
+			}
+		}
 	}
 	
 	
-	
+	public void method8() {
+		//*****/n
+		//*****/n
+		//*****/n
+		//*****/n
+		// 위 출력형식을 중첩반복문을 이용하여 완성하시오
+		
+		for(int j=0; j<4; j++) {
+			for(int i=0; i<5; i++) {
+			System.out.print("*");
+		}}
+			System.out.println();
+			//System.out.println("/n");
+		}
+		
+		public void method9() {
+			//1***/n
+			//*2**/n
+			//**3*/n
+			//***4/n
+			
+			for(int i=0; i<4; i++) {
+				if(i == 0) System.out.print(1);
+				else System.out.print("*");
+			}
+			System.out.println();
+			
+			for(int i=0; i<4; i++) {
+				if(i == 1) System.out.print(2);
+				else System.out.print("*");
+			} 
+			System.out.println();
+			
+			for(int i=0; i<4; i++) {
+				if(i == 2) System.out.print(3);
+				else System.out.print("*");
+			} 
+			System.out.println();
+			
+			for(int i =0; i<4; i++) {
+				for(int j =0; j<4; j++) {
+					if(j == i) System.out.print(i+1);
+					else System.out.print("*");
+				}
+				System.out.println();			
+			}
+			
+			
+		}
 }
