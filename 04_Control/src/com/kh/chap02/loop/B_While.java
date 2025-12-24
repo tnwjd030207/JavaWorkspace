@@ -5,7 +5,7 @@ public class B_While {
 	// 반복 횟수가 정해진 경우 for
 	// 불규칙한 경우 while
 	
-	/*
+	/* 
 	 * while문 
 	 * [표현법]
 	 * 
@@ -54,7 +54,7 @@ public class B_While {
 	}
 	
 	
-	/*
+	/* 잘 쓰이진 않음
 	 * do-while
 	 * [표현법]
 	 * do {
