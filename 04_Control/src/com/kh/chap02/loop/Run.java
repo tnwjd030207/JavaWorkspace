@@ -18,7 +18,7 @@ public class Run {
 	}
 
 	// i 4 = 4 
-	
+	// 중첩 반복문!!!!
 	public static void test1() {
 		
 		for (int i = 1; i <= 4; i++) {
