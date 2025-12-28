@@ -90,17 +90,17 @@ public class Test_1 {
 		
 		System.out.println( iNum1 / iNum2 ); // 2
 		System.out.println( (int)dNum ); // 2
-		System.out.println( (double)iNum*dNum ); // 10.0
+		System.out.println(  ); // 10.0
 		System.out.println( (double)iNum1 ); // 10.0
 		System.out.println( dNum ); // 2.5
-		System.out.println( (double)iNum/dNum ); // 2.5
+		System.out.println(  ); // 2.5
 		System.out.println( (int)fNum ); // 3
 		System.out.println( ); // 3
 		System.out.println( );// 3.3333333
 		System.out.println( ); // 3.3333333333333335
 		System.out.println( ch ); // 'A'
 		System.out.println( ch ); // 65
-		System.out.println( ch iNum1 ); // 75
-		System.out.println( (ch iNum1) ); // 'K'
+		System.out.println(  ); // 75
+		System.out.println( ); // 'K'
 	}
 }
