@@ -1,5 +1,7 @@
 package com.kh.practice.dimension;
 
+import java.util.Scanner;
+
 public class DimensionPractice {
 	public void practice1() {
 		int [][] arr = new int [3][3];
@@ -43,7 +45,37 @@ public class DimensionPractice {
 			System.out.println();
 	}
 	
+		
 
 	}
+	public void practice4() {
+		int [][] arr = new int [4][4];
+		
+		int vlaue = 6;
+				
+		
+			
+	}
+		public void practice5() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("행 크기 :");
+			int withd = sc.nextInt();
+			
+			System.out.println("열 크기 :");
+			int height = sc.nextInt();
+			
+			
+			
+		
+			int ran = (int)(Math.random()*26)+65;
+			char arr [][] = new char[withd][height];
+			
+			for(int i=1; i<arr.length; i++) {
+				for
+			}
+			
+			}
+		
 }
 
