@@ -6,9 +6,11 @@ public class UpAndDown {
 	Scanner sc = new Scanner(System.in);
 	public void upDown(){
 		System.out.println("1부터 100 사이의 임의의 난수를 맞춰보세요 :");
-		int count = 0;
-		int num = 0;
 		int ran = (int)(Math.random()*100)+1;
+		int count = 0;
+		
+		int num = 0;
+		
 		
 		while(num!=ran) {
 			num = sc.nextInt();
@@ -25,4 +27,33 @@ public class UpAndDown {
 			
 	}
 	
+	
+	
+	
+	
+	public void upDown1() {
+		int ran = (int)(Math.random()*100)+1;
+		int count = 1;
+		
+		while(true) {
+			System.out.println("1부터 100 사이의 임의의 난수를 맞춰보세요 :");
+			int num = sc.nextInt();
+			
+			if(num == ran) {
+				break;
+			} 
+			if(!(num>=1 && num<=100)) {
+				System.out.println("1~100 사이의 숫자를 입력하세요");
+				continue;
+			}
+			if(num<ran)
+			{		System.out.println("up!");
+			}else {
+					System.out.println("down!");
+				} 
+			
+			count++;
+		}
+		System.out.println(count+"회만에 맞추셨습니다");
+	}
 }

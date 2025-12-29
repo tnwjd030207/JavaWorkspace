@@ -9,6 +9,9 @@ public class Run {
 		//ba.method1();
 		
 		ArrayPractice ar = new ArrayPractice();
-		ar.practice6();
+		//ar.practice6();
+		
+		C_DimensionalArray cd = new C_DimensionalArray();
+		cd.method4();
 	}
 }

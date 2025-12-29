@@ -101,8 +101,8 @@ public class A_Array {
 		// 를 코드로 작성하면 실행시 에러가 발생한다.
 		
 							  //배열의 길이	
-		System.out.println(arr.length);
-		System.out.println(arr[0]);
+		//System.out.println(arr.length);
+		//System.out.println(arr[0]);
 		
 		}
 	
@@ -154,7 +154,7 @@ public class A_Array {
 		
 		//1.
 		int [] arr1 = new int[] {1, 2, 3, 4}; //[1,2,3,4]
-		//2.
+		//2.더 간편
 		int [] arr2 = {1,2,3,4}; //new int[] 생략
 		
 	}
