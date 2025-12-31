@@ -9,11 +9,27 @@ public class Shape {
 	public Shape() { 
 		
 	}
-	
-	public ShapeMenu(int type, double height, double withd) {
-		
+	//                            매개변수
+	public Shape(int type, double height, double withd) {
+		this.type = type;
+		this.height = height;
+		this.withd = withd;
 	}
 	
 	public String information() {
+		return type+", "+height+", "+withd;
 	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+}
 }

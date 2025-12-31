@@ -12,9 +12,11 @@ public class MethodTest1 {
 	// 1. 매개변수가 없고, 반환할 값도 없는 메서드
 	public void method1() {
 		System.out.println("매개변수X, 반환값X");
+		
+		// return;
 	}
 
-	// return;
+	
 	// void는 알아서 넣어줌
 
 	// 2.매개변수X, 반환형O

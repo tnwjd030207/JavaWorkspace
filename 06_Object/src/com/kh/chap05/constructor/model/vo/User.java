@@ -10,7 +10,7 @@ public class User {
 	//생성자부
 	/*
 	 * 생성자
-	 * {표현법}
+	 * {표현법} -> 객체 생성!!!
 	 * public 클래스명([매개변수]){
 	 *   생성자를 통해 객체 생성시 실행할 코드
 	 * }
@@ -27,7 +27,7 @@ public class User {
 	 */
 	
 	//기본 생성자
-	//- 생성자 미 작성시 JVM이 자동으로 만들어주는 생성자
+	//- 생성자 미작성시 JVM이 자동으로 만들어주는 생성자
 	//- 되도록 항상 기본생성자를 추가하는 습관을 가질 것
 	public User() {
 		System.out.println("기본생성자 호출");
@@ -43,7 +43,7 @@ public class User {
 	public User (String userId, int age, char gender) {
 		//다른 생성자에서 동일한 필드값을 초기화 하고 있는 경우,
 		//현재 생성자에서 다른 생성자를 호출하는 방식으로 코드를 줄일 수 있다
-		this(userId); //this생성자 호출 *무조건 첫 번쨰 줄에서 사용
+		this(userId); //this생성자 호출 *무조건 첫 번쨰 줄에서 사용!!!
 		this.userId = userId;
 		this.age = age;
 		this.gender = gender;

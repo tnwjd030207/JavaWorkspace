@@ -19,7 +19,7 @@ public class MethodTest2 {
  public static int method(int num1) {
 	 int local = 0;
 	 /*
-	  * static메서드 안에서는 일반 field는 접근이 불가능하다
+	  * static메서드 안에서는 일반 field는 접근이 불가능하다!!!
 	  * - 변수의 생성시점이 다르기 때문
 	  * - static에서는 프로그램 시작과 동시에 정적메모리영역에 할당되는데.
 	  *   같은 시점에 static변수 함께 할당되기 때문에 static변수는 사용 가능
