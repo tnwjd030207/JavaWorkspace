@@ -20,7 +20,7 @@ public class C_Scanner {
 		String lastname = sc.nextLine(); //수정
 	
 		
-		System.out.println(firstname+lastname);
+		System.out.println(lastname);
 		
 		System.out.println("당신의 나이는 몇 살 입니까?");
 		int age = sc.nextInt();

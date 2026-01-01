@@ -1,0 +1,29 @@
+package com.kh.example.practice2.model.vo;
+
+import java.util.Iterator;
+
+public class Lotto {
+	public int lotto[] = new int [6];
+	{
+		for (int i = 0; i < lotto.length; i++) {
+			lotto[i] = (int)Math.random()*45+1;
+				for (int j = 0; j < i; j++) {
+					if(lotto[i] == lotto[j]) {
+						i--;
+						break;
+					}
+				}
+		}
+	}
+	
+	public Lotto() {
+		
+	}
+	
+	public void infor() {
+		for (int i = 0; i < lotto.length; i++) {
+			System.out.println(lotto[i]);
+		}
+	}
+
+}

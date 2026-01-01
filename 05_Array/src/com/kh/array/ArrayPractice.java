@@ -254,14 +254,14 @@ public class ArrayPractice {
 		
 		for(int i=0; i<arr.length; i++) {
 			System.out.print("배열의 크기를 입력하세요 :");
-			int num = sc.nextInt();
-			String [] arr = new String[num];
+			num = sc.nextInt();
+			arr = new String[num];
 			
 			sc.nextInt(); //개행문자 제거
 			
-			for(int i=0; i<arr.length; i++) {
-				System.out.print(i+1+"번째 문자열 :");
-				arr[i]= sc.nextLine(); //띄어쓰기 포함
+			for(int j=0; j<arr.length; j++) {
+				System.out.print(j+1+"번째 문자열 :");
+				arr[j]= sc.nextLine(); //띄어쓰기 포함
 			}
 			
 			while(true) {
@@ -275,9 +275,9 @@ public class ArrayPractice {
 					
 					sc.nextLine();
 					
-					for(int i=arr.length; i<copy.length; i++) {
-						System.out.print(i+1+"번째 문자열 :");
-						copy[i]= sc.nextLine(); //띄어쓰기 포함
+					for(int j=arr.length; j<copy.length; j++) {
+						System.out.print(j+1+"번째 문자열 :");
+						copy[j]= sc.nextLine(); //띄어쓰기 포함
 					}
 					arr=copy;//얕은복사
 			}else {

@@ -14,9 +14,14 @@ public class Run {
 		
 		//FieldTest3의 필드 및 메서드 호출
 		//static 필드 및 메서드 호출방법
-		// 클래스명.static필드명 or 클래서명.sttic메서드()
+		// 클래스명.static필드명 or 클래서명.static메서드()
 		System.out.println(FieldTest3.PI); // 객체생성 불필요
 		//객체를 생성하지 않아도, 이미 메모리에 저장공간이 할당된 상태이기 때문
+		FieldTest3.test();
+		
+		FieldTest3 ft3 = new FieldTest3();
+		System.out.println(ft3.PI);
+		
 	}
 	
 
