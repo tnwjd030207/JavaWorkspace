@@ -1,9 +1,11 @@
 package com.kh.exception.controller.run;
 
 import com.kh.exception.controller.A_UncheckedException;
+import com.kh.exception.controller.B_CheckedException;
+import com.kh.exception.controller.C_CourtomException;
 
 public class Run {
-public static void main(String[] args) {
+public static void main(String[] args) throws C_CourtomException {
 	/*
 	 * 에러(오류) 종류
 	 * - 시스템 에러
@@ -29,6 +31,13 @@ public static void main(String[] args) {
 	 */
 	
 	A_UncheckedException au = new A_UncheckedException();
-	au.method1();
+	//au.method1();
+	
+	B_CheckedException bc = new B_CheckedException();
+	//bc.method2();
+	
+	//에러 강제 발생
+	//throw new 에러클래스 생성자(에러 메세지) :
+	throw new C_CourtomException("에러발생");
 }
 }
