@@ -1,61 +1,45 @@
 package com.kh.chap01_list.part01_arrayList.run;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
 import com.kh.chap01_list.part01_arrayList.model.vo.Music;
+import com.kh.chap01_list.part01_arrayList.model.vo.MusicArtistDescending;
 
+//Array list에서 사용하는 여러 메서드들
 public class ListRun {
 	/*
-	 * 컬렉션 (Collection)
-	 * 	- 자료구조가 내장되어있는 클래스로, 자바에서 제공하는 자료구조를 담당하는 프레임워크
+	 * 컬렉션 (Collection) - 자료구조가 내장되어있는 클래스로, 자바에서 제공하는 자료구조를 담당하는 프레임워크
 	 * 
 	 * 
-	 * 자료구조
-	 * 	- 방대한 데이터들을 효율적으로 다룰 때 필요한 개념
+	 * 자료구조 - 방대한 데이터들을 효율적으로 다룰 때 필요한 개념
 	 * 
-	 * 프레임워크
-	 * 	- 효율적인 기능들이 정의되어있는 틀
+	 * 프레임워크 - 효율적인 기능들이 정의되어있는 틀
 	 * 
 	 * 데이터들이 새롭게 추가되거나 삭제되거나, 수정이 되는 기능들을 이미 정의해놓은 틀이다
 	 * 
-	 * 배열과 컬렉션(List)의 차이점
-	 * 	- 배열의 단점
-	 * 	1. 같은자료형의 데이터만 저장 가능
-	 * 	2. 배열의 크기를 수정할 수 없다
-	 * 	3. 배열내부의 값들을 조작하기 불편하다
+	 * 배열과 컬렉션(List)의 차이점 - 배열의 단점 1. 같은자료형의 데이터만 저장 가능 2. 배열의 크기를 수정할 수 없다 3. 배열내부의
+	 * 값들을 조작하기 불편하다
 	 * 
-	 *	- 컬렉션의 장점
-	 *	1. 여러자료형의 값을 저장할 수 있다 (제네릭 설정을 통해 한가지 유형의 데이터만 저장도 가능)
-	 *	2. 중간에 값을 추가하거나, 삭제하는 등 배열내부의 값들을 조작하기 위한 편리한 메서드가 정의되어 있다
-	 *	3. 크기에 대한 제약이 없다 (배열 깊은 복사를 알아서 해준다)
+	 * - 컬렉션의 장점 1. 여러자료형의 값을 저장할 수 있다 (제네릭 설정을 통해 한가지 유형의 데이터만 저장도 가능) 2. 중간에 값을
+	 * 추가하거나, 삭제하는 등 배열내부의 값들을 조작하기 위한 편리한 메서드가 정의되어 있다 3. 크기에 대한 제약이 없다 (배열 깊은 복사를
+	 * 알아서 해준다)
 	 *
 	 *
-	 *컬렉션의 3가지 분류
-	 *	List계열
-	 *	- 담고자 하는 값만을 저장
-	 *	- 값을 저장시 순서를 유지한다 (index 존재)
-	 *	- 중복값을 담아도 상관없다
-	 *	- ArrayList, Vector, LinkedList 등이 존재
-	 *	  †많이 사용됨
-	 *	 배열의 강화 버전
+	 * 컬렉션의 3가지 분류 List계열 - 담고자 하는 값만을 저장 - 값을 저장시 순서를 유지한다 (index 존재) - 중복값을 담아도
+	 * 상관없다 - ArrayList, Vector, LinkedList 등이 존재 †많이 사용됨 배열의 강화 버전
 	 *
-	 *	Set계열
-	 *	- 담고자하는 값만 저장
-	 *	- 값 저장시 순서를 유지하지 않는다 (index가 없다)
-	 *	- 중복값을 허용하지 않는다
-	 *	- HachSet, TreeSet
-	 *		†해쉬코드 기반으로 작동한다
+	 * Set계열 - 담고자하는 값만 저장 - 값 저장시 순서를 유지하지 않는다 (index가 없다) - 중복값을 허용하지 않는다 -
+	 * HachSet, TreeSet †해쉬코드 기반으로 작동한다
 	 *
-	 *	Map계열
-	 *	- 담고자 하는 값(value)과 그 값을 저장하는 키(key)를 함께 저장
-	 *	- 값 저장시 순서를 유지하지 않는다 (index X)
-	 *	- key값의 중복은 허용하지 않으나, value의 중복은 허용
-	 *	- HashMap, Properties, ...
+	 * Map계열 - 담고자 하는 값(value)과 그 값을 저장하는 키(key)를 함께 저장 - 값 저장시 순서를 유지하지 않는다 (index
+	 * X) - key값의 중복은 허용하지 않으나, value의 중복은 허용 - HashMap, Properties, ...
 	 */
-	
-	
+
 	public static void main(String[] args) {
 		List list = new ArrayList(); //크기 10배열 생성
 		// 경고 표시 : 제네릭을 해줘야 함
@@ -171,11 +155,58 @@ public class ListRun {
 		System.out.println("리스트가 비어있습니까? :"+list.isEmpty());
 		
 		
-		//12. clear()
-		//	- 리스트에 저장된 모든 값을 비워주는 메서드
-		list.clear();
-		System.out.println("리스트가 비어있습니까? :"+list.isEmpty());
-		System.out.println(list);
+		/*
+		 * //12. clear() // - 리스트에 저장된 모든 값을 비워주는 메서드 list.clear();
+		 * System.out.println("리스트가 비어있습니까? :"+list.isEmpty());
+		 * System.out.println(list);
+		 */
 		
+		
+		System.out.println("========================================================================================");
+		//13. Collections.sort(List list) : 배열을 정렬해주는 메서드
+		List<String>list3 = new ArrayList<>();
+		list3.add("나");
+		list3.add("가");
+		list3.add("다");
+		list3.add("라");
+		list3.add("마");
+		
+		System.out.println(list3);
+		
+		//정렬매서드 호출
+		Collections.sort(list3);
+		System.out.println(list3);
+		
+		//역순으로 정렬
+	     Collections.sort(list3);
+		 System.out.println(list3);
+		 Comparator<String> comp = Collections.reverseOrder();
+		 System.out.println(list3);
+		 
+		 
+		 /*
+		  * 내가 만든 클래스 (vo)를 정렬하기 위한 방법
+		  * 1. comparable 인터페이스 상속
+		  * 	- Vo클래스에 직접 상속시켜서 사용
+		  * 	- 해당 VO클래스의 "기본정렬조건"으로 사용한다
+		  * 
+		  * 2. comparator 인터페이스 상속
+		  * 	- 기본정렬조건 외에 추가 정렬조건을 만들고자 할 때 사용
+		  * 	- VO클래스 이외 별도 클래스에 Comparator를 상속시켜서 구현한다
+		  * 	- 여러개의 정렬조건을 만들 수 있따
+		  */
+		 System.out.println("========================================================================================");
+		 Collections.sort(list); //기본
+		 System.out.println(list);
+		 
+		 Comparator<Music> comp2 = new MusicArtistDescending(); //추가
+		 Collections.sort(list, comp2);
+		 
+		 
+		 //	14. Collections.shuffle();
+		 //	- 내부 데이터를 섞는 메서드
+		 Collections.shuffle(list3);
+		 System.out.println(list3);
+		 
 	}
 }
