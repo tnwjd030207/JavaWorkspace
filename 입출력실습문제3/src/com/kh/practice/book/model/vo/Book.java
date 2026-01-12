@@ -1,13 +1,15 @@
 package com.kh.practice.book.model.vo;
 
+import java.util.Calendar;
+
 public class Book {
-	private String title; // ë„ì„œëª…
-	private String author; //ì €ì
-	private int price; //ê°€ê²©
-	private Calendar date; //ì¶œíŒë‚ ì§œ
-	private double discount; //í• ì¸ìœ¨
+	private String title; // µµ¼­¸í
+	private String author; //ÀúÀÚ
+	private int price; //°¡°İ
+	private Calendar date; //ÃâÆÇ³¯Â¥
+	private double discount; //ÇÒÀÎÀ²
 	
-	public(){
+	public (){
 		
 	}
 

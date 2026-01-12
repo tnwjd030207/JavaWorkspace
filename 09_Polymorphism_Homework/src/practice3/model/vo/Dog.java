@@ -17,7 +17,7 @@ public class Dog extends Animal {
 		return PLACE;
 	}
 	public void setPLACE(String pLACE) {
-		PLACE = pLACE;
+		
 	}
 	public int getWeight() {
 		return weight;
