@@ -70,8 +70,38 @@ class 반복문 {
 			}
 			
 		}
+	}
+	
+	public void practice5() {
+		//사용자로부터 입력 받은 숫자의 단부터 9단까지 출력
+		//9를 초과X 다시 입력
 		
+		System.out.print("숫자 :");
+		int num = sc.nextInt();
 		
+		if(num>9) {
+			System.out.println("9 이하의 숫자를 입력해주세요");
+			practice5();
+		}
+		
+		for(int i=num; i<=9; i++) {
+			System.out.println("====="+i+"단 =====");
+		}
+	}
+	
+	public void practice6() {
+		//시작 숫자와 공차 입력 받기
+		//일정한 값으로 숫자가 커지거나 작아지는
+		//출력되는 숫자는 총 10개
+		
+		System.out.print("시작 숫자 :");
+		int num = sc.nextInt();
+		System.out.print("공차 :");
+		int go = sc.nextInt();
+		
+		for(int i=num; i<10; i++) {
+			System.out.print((i*go+" "));
+		}
 		
 	}
 }
