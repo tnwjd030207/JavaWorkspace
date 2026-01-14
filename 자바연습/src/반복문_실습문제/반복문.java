@@ -99,8 +99,8 @@ class 반복문 {
 		System.out.print("공차 :");
 		int go = sc.nextInt();
 		
-		for(int i=num; i<10; i++) {
-			System.out.print((i*go+" "));
+		for(int i = 0; i < 10; i++) {
+			System.out.print((num + (go * i)+" "));
 		}
 		
 	}
