@@ -104,6 +104,47 @@ public class 배열 {
 	
 	public void practice5(){
 		//사용자가 배열의 길이를 직접 입력, 그 값 만큼 정수형 배열을 선언 및 할당
-		//배열의 크기만큼 사용자
+		//배열의 크기만큼 사용자가 직접 값을 입력
+		//배열 전체 값을 나열하고 각 인덱스에 저장된 값들의 합 출력
+		
+		System.out.print("정수: ");
+		int num = sc.nextInt();
+		
+		int [] arr = new int [num];
+		
+		int sum = 0;
+		
+		for(int i=0; i<num; i++) {
+			System.out.print("배열 "+i+"번째 인덱스에 넣을 값 :");
+			int num2 = sc.nextInt();
+			arr[i] = num2;
+			sum += num2;
+		
+		}
+		System.out.print("총 합 :"+sum);
 	}
+	
+	public void practice6() {
+		//문자열 입력 받기
+		//어떤 문자가 들어갔는지 배열에 저장
+		//문자 개수 출력
+		
+		System.out.print("문자열 :");
+		String str = sc.next();
+		
+		char [] arr = new char [str.length()];
+		
+		for(int i=0; i<str.length(); i++) {
+			arr[i] = str.charAt(i);
+			
+			for(int j=0; j<str.length(); i++) {
+				if(i == j) {
+					continue;
+				}
+			} System.out.println(arr[i]);
+			
+		}
+		System.out.print("문자열에 있는 문자 :");
+		System.out.println("문자 개수 :");
+	}	
 }
