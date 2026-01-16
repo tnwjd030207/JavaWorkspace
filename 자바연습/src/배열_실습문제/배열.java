@@ -137,7 +137,7 @@ public class 배열 {
 		for(int i=0; i<str.length(); i++) {
 			arr[i] = str.charAt(i);
 			
-			for(int j=0; j<str.length(); i++) {
+			for(int j=0; j<=i j++) {
 				if(i == j) {
 					continue;
 				}

@@ -1,4 +1,4 @@
-package com.kh.practice.network.ip_네트워크실습문제;
+package com.kh.practice.network.ip;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -18,6 +18,10 @@ public static void main(String[] args) {
 	InetAddress[] arr;
 	try {
 		arr = InetAddress.getAllByName(host);
+		System.out.println(host+"은 "+arr.length+"개의 주소를 가지고 있습니다.");
+		
+		int count = 1; 
+		
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println("ip 주소 : "+arr[i].getHostAddress());
 		}
@@ -27,11 +31,8 @@ public static void main(String[] args) {
 	
 	//조회한 ip 갯수가 1개 이상이면 루프문으로 모두 출력하고,
 	//예외처리는 try~catch로 직접 처리한다.
-	if((arr[i].getHostAddress()) >= 1) {
-		for(int i=0; i<arr.length; i++) {
-			System.out.println();
-		}
-	}
+	
+	
 
 }
 }
