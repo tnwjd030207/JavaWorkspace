@@ -28,7 +28,7 @@ public class 게임 {
 				System.out.println("down!");
 				count++;
 				continue;
-				
+
 			}
 			if (random == num) {
 				System.out.println("정답입니다! " + count + "회만에 맞추셨습니다.");
@@ -36,8 +36,62 @@ public class 게임 {
 		}
 
 	}
-	
-	public void rps(){
+
+	public void rps() {
+		// 사용자의 이름을 입력하고 컴퓨터와 가위바위보
+		// 컴퓨터는 랜덤수를 통해 결정, 사용자에겐 직접 받기
+		// “exit”가 들어가면 종료, 결과 출력
+
+		System.out.print("당신의 이름을 입력해주세요 :");
+		String name = sc.next();
+		sc.nextLine(); //개행문자
 		
+		int count = 0;
+		int lose=0, drow=0, win=0; 
+
+		
+		while(true) {
+		System.out.print("가위바위보 :");
+		String me = sc.nextLine();
+
+		if (!(me.equals("가위") || me.equals("바위") || me.equals("보"))) {
+			System.out.println("잘못 입력했습니다");
+		}
+
+		int com = (int) (Math.random() * 2);
+		String comStr = "";
+		if (com == 0) {
+			comStr = "가위";
+		} else if (com == 1) {
+			comStr = "바위";
+		} else if (com == 2) {
+			comStr = "보";
+		}
+		System.out.println("컴퓨터 :" + comStr);
+
+		if (me.equals(comStr)) {
+			System.out.println("비겼습니다");
+			count++;
+			drow++;
+
+		} else if ((me.equals("가위") && comStr.equals("보")) || (me.equals("바위") && comStr.equals("가위"))
+				|| (me.equals("보") && comStr.equals("바위"))) {
+			System.out.println("이겼습니다!");
+			count++;
+			win++;
+
+		} else if ((me.equals("가위") && comStr.equals("바위")) || (me.equals("바위") && comStr.equals("보"))
+				|| (me.equals("보") && comStr.equals("가위"))) {
+			System.out.println("졌습니다 ㅠㅠ");
+			count++;
+			lose++;
+		}
+
+		if (me.equals("exit")) {
+			System.out.println(count + "전 " + win + "승 " + drow + "무 " + lose + "패");
+			break;
+		}
+		}
+
 	}
 }
