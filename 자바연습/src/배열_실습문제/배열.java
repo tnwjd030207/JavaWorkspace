@@ -127,24 +127,86 @@ public class 배열 {
 	public void practice6() {
 		//문자열 입력 받기
 		//어떤 문자가 들어갔는지 배열에 저장
-		//문자 개수 출력
+		//문자 개수 출력 (중복 제외)
+	}
+	
+	public void practice7() {
+		//문자열 입력 받기
+		//문자 입력 받기
+		//문자열을 배열에 넣고 검색한 문자가 몇 개인지
+		//몇 번째 인덱스에 위치하는지 출력
 		
 		System.out.print("문자열 :");
 		String str = sc.next();
+		System.out.print("문자 :");
+		char ch = sc.next().charAt(0);
 		
-		char [] arr = new char [str.length()];
+		String [] arr = new String [str.length()];
+		int count = 0;
 		
-		for(int i=0; i<str.length(); i++) {
-			arr[i] = str.charAt(i);
-			
-			for(int j=0; j<=i j++) {
-				if(i == j) {
-					continue;
-				}
-			} System.out.println(arr[i]);
+		for(int i=0; i<arr.length; i++) {
+			if(str.charAt(i)==ch) {
+				count++;
+				System.out.println(str+"에 "+ch+"가 존재하는 위치(인덱스) :"+(i+1));
+			}
 			
 		}
-		System.out.print("문자열에 있는 문자 :");
-		System.out.println("문자 개수 :");
-	}	
+		System.out.println(ch+"에 개수 :"+count);
+	}
+	
+	public void practice12() {
+		//배열의 크기 입력 받고 그 크기만큼 문자열 받기
+		//사용자에게 값을 더 넣을 건지, 몇 개를 더 입력할 건지,
+		//늘린 곳에 어떤 데이터를 넣을 건지 받기
+		//입력하지 않겠다면 받은 전체 값 출력
+		
+		System.out.print("배열의 크기를 입력하세요 :");
+		int num = sc.nextInt();
+		
+		String [] arr = new String [num];
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.println((i+1)+"번째 문자열 :");
+			arr[i] = sc.next();
+		}
+		
+		while(true) {
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) :");
+			char ch = sc.next().charAt(0);
+			
+			if(ch=='Y' || ch=='y') {
+				System.out.print("더 입력하고 싶은 개수 :");
+				int num2 = sc.nextInt();
+				
+				String [] arr2 = new String [arr.length+num2];
+				
+				for(int i=0; i<arr.length; i++) {
+					arr2[i] = arr[i];
+				}
+				
+				for(int i = arr.length; i<arr2.length; i++) {
+					System.out.print((i+1)+"번째 문자열 :");
+					arr2[i] = sc.next();
+				}
+				
+				arr=arr2;
+				
+			}else if( ch=='N' || ch=='n') {
+				System.out.print("[");
+				
+				for(int i=0; i<arr.length; i++) {
+					System.out.print(arr[i]);
+					if(i != arr.length-1) {
+						System.out.print(", ");
+					}
+				}
+				System.out.print("]");
+				break;
+			} else {
+				System.out.println("Y 또는 N만 입력하세요");
+			}
+			
+		}
+		
+	}
 }
