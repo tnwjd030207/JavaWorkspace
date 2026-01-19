@@ -33,7 +33,7 @@ public class LambdaRun {
 	
 	public static void main(String[] args) {
 		//익명내부클래스
-		LambdTest1 lambd1 = new LambdaTest1() {
+		LambdaTest1 lambd1 = new LambdaTest1() {
 
 			@Override
 			public int add(int x, int y) {
@@ -41,7 +41,7 @@ public class LambdaRun {
 			}
 			
 		};
-		int result = lambd1.add(1, 9);
+		int result = lambd1.add(1, 9);       
 		System.out.println(result);
 		
 		//람다식

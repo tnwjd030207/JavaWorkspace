@@ -30,7 +30,8 @@ public static void main(String[] args) {
 	
 	// - 실습문제 -
     // 각 람다식을 가장 간결한 형태로 표현하기
-    // 1. ((int x) -> { return (x * x); });                                    x -> x*x;
+    // 1. ((int x) -> { return (x * x); });     
+	//  답 : x -> x * x;
     // 2. (String str) -> { return (str.length()); };                     
     // 3.  (int x) -> { System.out.println(x); return x; };            
     // 4. (String str) -> { return (str.toUpperCase()); };              
