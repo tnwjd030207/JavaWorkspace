@@ -24,14 +24,22 @@ public class _2차원배열 {
 	
 	
 	public void practice4(){
+		//4행 4열 2차원 배열 생성
+		//0,0~ 2,2까지는 1~10까지의 임의의 정수 값 저장
+		
 		int [][] arr = new int [4][4];
 		
-		for(int i= 0; i<arr.length; i++) {
-			for(int j=0; j<arr.length; j++) {
-				arr[2][2] = (int)(Math.random()*10)+1; 
-				System.out.print(arr[2][2]+" ");
-			} System.out.println();
-		}
+		for(int i= 0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				arr[i][j] = (int)(Math.random()*10)+1; 
+			
+				arr[i][3] += arr[i][j];
+				arr[3][j] += arr[i][j];
+				arr[3][3] += arr[i][j];
+				
+				System.out.print(arr[i][j] + " ");
+			}
+		}System.out.println();
 		
 		
 		
