@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class CastingPractice {		
 	Scanner sc = new Scanner(System.in);
-
+ 
 	public void pratice1() {
-		System.out.print("±¹¾î : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		double kor = sc.nextDouble();
-		System.out.print("¿µ¾î : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		double eng = sc.nextDouble();
-		System.out.print("¼öÇÐ : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		double mth = sc.nextDouble();
 		
 		int sum = (int)(kor+ eng + mth);
 		int avg = sum / 3;
 		
-		System.out.println("ÃÑÁ¡ : " + sum);
-		System.out.println("Æò±Õ : " + avg);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + sum);
+		System.out.println("ï¿½ï¿½ï¿½ : " + avg);
 	}
 	public void method() {
 		int iNum1 = 10;

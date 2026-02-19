@@ -47,7 +47,7 @@ public class FieldTest1 {
 			int a = 0;
 		}
 		System.out.println(global);
-		//전역변수의 저장위치는 heep 메모리영역이며, 이 공간은 비버있을 수 없기 때문에 jvm 자료형의 기본값으로 초기화 시켜두었다.
+		//전역변수의 저장위치는 heep 메모리영역이며, 이 공간은 비어있을 수 없기 때문에 jvm 자료형의 기본값으로 초기화 시켜두었다.
 
 		System.out.println(local);
 		//초기화 하지 않으면 오류

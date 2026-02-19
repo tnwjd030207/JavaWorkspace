@@ -13,6 +13,6 @@ public class test1 {
 		System.out.println(firstname + lastname);
 		System.out.println(firstname);
 		System.out.println(lastname);
-		
+		 
 	}
 }

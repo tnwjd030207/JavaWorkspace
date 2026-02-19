@@ -12,6 +12,7 @@ public class C_DimensionalArray {
 		 3.자료형 [][] 배열명;
 		 */
 		
+		
 		int arr3[][];
 		arr3 = new int[2][3];
 		
