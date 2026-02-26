@@ -8,7 +8,7 @@ public class C_continue {
 가장 가까운 반복문으로 돌아가서 재실행
 break와 비슷한 개념
   */
-	private void 제1메소드() {
+	private void method1() {
 		for (int i = 0; i < 10; i++) {
 			if (i%2 == 0) {
 				continue;

@@ -85,9 +85,9 @@ public class A_For {
 		 */
 		int random = (int)(Math.random() * 10 + 1);
 		System.out.println("랜덤값 : " + random);
-		int sum = 0;
+		int sum = 0;  
 		for(int i = 1; i<=random; i++) {
-			sum += i;
+			sum += i; 
 		}
 		System.out.println(sum);
 	}
@@ -98,7 +98,7 @@ public class A_For {
 			System.out.print(str.charAt(i));
 		}
 	}
-	public void method7() {
+	public void method7() { 
 		//구구단
 		int result = 0;
 		for (int i = 1; i <= 9; i++) {
@@ -123,13 +123,13 @@ public class A_For {
 			for (int j = 0; j < 4; j++) {
 				if (j == i) System.out.print(i + 1);
 				else System.out.print("*");
-			}
+			}	
 			System.out.println();
 		}
 			
 	}
 	public static void main(String[] args) {
 		A_For af = new A_For();
-		af.method9();
+		af.method6();
 	}
 }
